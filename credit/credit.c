@@ -25,6 +25,7 @@ int main(void)
     // declaring variables I will need
     int mod1;
     int mod2;
+    int x = cardNumber;
     int sum1 = 0;
     int sum2 = 0;
     int d1;
@@ -35,13 +36,13 @@ int main(void)
     do
     {
         // Getting the last digit and other digits
-        mod1 = cardNumber % 10;
-        cardNumber /= 10; // reducing the number
+        mod1 = x % 10;
+        x /= 10; // reducing the number
         sum1 = sum1 + mod1;
 
         // Getting every other digit in the card
-        mod2 = cardNumber % 10;
-        cardNumber /= 10;
+        mod2 = x % 10;
+        x /= 10;
 
         // Multiplying every other digit by two and adding each digit together
         mod2 = mod2 * 2;
@@ -49,7 +50,7 @@ int main(void)
         d2 = mod2 % 2;
         sum2 = sum2 + d1 + d2;
     }
-    while(cardNumber > 0);
+    while(x > 0);
 
     // Totaling the two sums
     total = sum1 + sum2;
