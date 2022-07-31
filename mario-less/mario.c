@@ -9,7 +9,7 @@ int main(void)
     // Getting an input and checking if it is between 1 and 8
     do
     {
-        n = get_int("Input a Number (1 - 8): ");
+        n = get_int("Height: (1 - 8): ");
     }
     while (!(n >= 1 && n <= 8));
 
