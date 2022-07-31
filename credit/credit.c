@@ -33,6 +33,9 @@ int main(void)
         d1 = mod2 / 2;
         d2 = mod2 % 2;
         sum2 = sum2 + d1 + d2;
-
     }
+
+    // Check Luhn Algorithm
+
+    if (total)
 }
