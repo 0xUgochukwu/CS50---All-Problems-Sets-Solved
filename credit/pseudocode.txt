@@ -1,0 +1,6 @@
+Ask the user for the card number
+Get every other digit
+Add every other digit you got together and store it in a variable sum1
+Get other digits
+Add it together and store in a variable sum2
+Add sum1 and sum2 and check if it is divisible by 10
