@@ -7,20 +7,20 @@ int main(void)
     // Asking User for Card Number
     long cardNumber = get_long("Number: ");
 
-    // // Count length
-    // int i = 0;
-    // long cc = cardNumber;
-    // while (cc > 0)
-    // {
-    //     cc = cc / 10;
-    //     i++;
-    // }
+    // Count length
+    int i = 0;
+    long cc = cardNumber;
+    while (cc > 0)
+    {
+        cc = cc / 10;
+        i++;
+    }
 
-    // // Check if length is valid
-    // if (i != 13 && i != 15 && i != 16)
-    // {
-    //     printf("INVALID\n");
-    // }
+    // Check if length is valid
+    if (i != 13 && i != 15 && i != 16)
+    {
+        printf("INVALID\n");
+    }
 
     // declaring variables I will need
     int mod1;
@@ -57,7 +57,10 @@ int main(void)
 
     // Check Luhn Algorithm
 
-
+    if ((total % 10) != 0)
+    {
+        printf("INVALID\n");
+    } else {
         // Getting the first Digits
 
         long start = cardNumber;
@@ -83,5 +86,5 @@ int main(void)
         {
             printf("INVALID\n");
         }
-
+    }
 }
