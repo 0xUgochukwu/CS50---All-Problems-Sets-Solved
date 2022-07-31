@@ -4,7 +4,9 @@
 int main(void)
 {
 
-    // Ask User for Card Number
+    // Asking User for Card Number
     long cardNumber = get_long("Number: ");
 
+    // Getting Every other digit
+    for 
 }
