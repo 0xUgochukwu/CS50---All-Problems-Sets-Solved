@@ -7,9 +7,17 @@ int main(void)
     // Asking User for Card Number
     long cardNumber = get_long("Number: ");
 
+    // declaring variables I will need
+    int mod1;
+    int mod2;
+    int sum1;
+    int sum2;
+
     // Getting Every other digit
     while(cardNumber)
     {
-        printf(score % 10)
+        mod1 = cardNumber % 10;
+        cardNumber /= 10;
+
     }
 }
