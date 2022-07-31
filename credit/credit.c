@@ -57,10 +57,7 @@ int main(void)
 
     // Check Luhn Algorithm
 
-    if ((total % 10) != 0)
-    {
-        printf("INVALID\n");
-    }
+
         // Getting the first Digits
 
         long start = cardNumber;
