@@ -32,7 +32,7 @@ int main(void)
     int total;
 
     // Breaking the Card Number
-    while(cardNumber)
+    do
     {
         // Getting the last digit and other digits
         mod1 = cardNumber % 10;
@@ -49,6 +49,7 @@ int main(void)
         d2 = mod2 % 2;
         sum2 = sum2 + d1 + d2;
     }
+    while(cardNumber > 0);
 
     // Totaling the two sums
     total = sum1 + sum2;
