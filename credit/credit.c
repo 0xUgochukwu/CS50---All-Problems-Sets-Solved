@@ -30,25 +30,25 @@ int main(void)
     int sum2 = 0;
     int d1;
     int d2;
-    int total = 0;
+    int total;
 
     // Breaking the Card Number
     do
     {
         // Getting the last digit and other digits
         mod1 = x % 10;
-        x = x / 10; // reducing the number
-        sum1 = sum1 + mod1;
+        x /= 10; // reducing the number
+        sum1 += mod1;
 
         // Getting every other digit in the card
         mod2 = x % 10;
-        x = x / 10;
+        x /= 10;
 
         // Multiplying every other digit by two and adding each digit together
         mod2 = mod2 * 2;
-        d1 = mod2 % 2;
-        d2 = mod2 / 2;
-        sum2 = sum2 + d1 + d2;
+        d1 = mod2 % 10;
+        d2 = mod2 / 10;
+        sum2 += d1 + d2;
     }
     while(x > 0);
 
