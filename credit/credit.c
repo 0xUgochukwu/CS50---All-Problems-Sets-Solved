@@ -8,5 +8,5 @@ int main(void)
     long cardNumber = get_long("Number: ");
 
     // Getting Every other digit
-    for 
+    for (int i = 1)
 }
