@@ -37,17 +37,17 @@ int main(void)
     {
         // Getting the last digit and other digits
         mod1 = x % 10;
-        x /= 10; // reducing the number
+        x = x / 10; // reducing the number
         sum1 = sum1 + mod1;
 
         // Getting every other digit in the card
         mod2 = x % 10;
-        x /= 10;
+        x = x / 10;
 
         // Multiplying every other digit by two and adding each digit together
         mod2 = mod2 * 2;
-        d1 = mod2 / 2;
-        d2 = mod2 % 2;
+        d1 = mod2 % 2;
+        d2 = mod2 / 2;
         sum2 = sum2 + d1 + d2;
     }
     while(x > 0);
