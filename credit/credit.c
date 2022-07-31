@@ -30,7 +30,7 @@ int main(void)
     int sum2 = 0;
     int d1;
     int d2;
-    int total;
+    int total = 0;
 
     // Breaking the Card Number
     do
