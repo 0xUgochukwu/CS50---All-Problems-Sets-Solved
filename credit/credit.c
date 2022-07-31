@@ -37,5 +37,10 @@ int main(void)
 
     // Check Luhn Algorithm
 
-    if (total)
+    if ((total % 10) != 0)
+    {
+        printf("INVALID\n");
+    } else {
+        
+    }
 }
