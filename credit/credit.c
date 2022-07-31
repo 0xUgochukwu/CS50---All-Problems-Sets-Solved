@@ -35,6 +35,9 @@ int main(void)
         sum2 = sum2 + d1 + d2;
     }
 
+    // Totaling the two sums
+    total = sum1 + sum2;
+
     // Check Luhn Algorithm
 
     if ((total % 10) != 0)
