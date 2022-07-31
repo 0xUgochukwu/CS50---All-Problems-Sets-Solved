@@ -12,6 +12,9 @@ int main(void)
     int mod2;
     int sum1 = 0;
     int sum2 = 0;
+    int d1;
+    int d2;
+    int total;
 
     // Breaking the Card Number
     while(cardNumber)
@@ -21,11 +24,15 @@ int main(void)
         cardNumber /= 10; // reducing the number
         sum1 = sum1 + mod1;
 
-        // Getting every other digit in the card and
+        // Getting every other digit in the card
         mod2 = cardNumber % 10;
         cardNumber /= 10;
-        sum2 = sum2 + (mod2 * 2);
 
+        // Multiplying every other digit by two and adding each digit together
+        mod2 = mod2 * 2;
+        d1 = mod2 / 2;
+        d2 = mod2 % 2;
+        sum2 = sum2 + d1 + d2;
 
     }
 }
