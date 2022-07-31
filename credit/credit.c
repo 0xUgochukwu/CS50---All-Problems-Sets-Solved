@@ -50,5 +50,9 @@ int main(void)
             start /= 10;
         }
         while (start > 100);
+
+        // Checking starting Digits for card type
+
+        if ((start / 10 == 5) && ((0 > start % 10) && (start % 10 < 6)))
     }
 }
