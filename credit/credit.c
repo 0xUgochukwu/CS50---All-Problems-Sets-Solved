@@ -41,6 +41,14 @@ int main(void)
     {
         printf("INVALID\n");
     } else {
-        
+        // Getting the first Digits
+
+        long start = cardNumber;
+
+        do
+        {
+            start /= 10;
+        }
+        while (start > 100);
     }
 }
