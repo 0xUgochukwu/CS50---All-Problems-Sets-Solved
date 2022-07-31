@@ -60,7 +60,7 @@ int main(void)
     if ((total % 10) != 0)
     {
         printf("INVALID\n");
-    } else {
+    }
         // Getting the first Digits
 
         long start = cardNumber;
@@ -86,5 +86,5 @@ int main(void)
         {
             printf("INVALID\n");
         }
-    }
+
 }
