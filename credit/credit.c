@@ -4,6 +4,7 @@
 int main(void)
 {
 
-
+    // Ask User for Card Number
+    long cardNumber = get_long("Number: ");
 
 }
