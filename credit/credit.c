@@ -8,5 +8,8 @@ int main(void)
     long cardNumber = get_long("Number: ");
 
     // Getting Every other digit
-    for (int i = 1; cardNumber;)
+    while(cardNumber)
+    {
+        printf(score % 10)
+    }
 }
