@@ -73,7 +73,7 @@ int main(void)
 
         // Checking starting Digits for card type
 
-        if ((start / 10 == 5) && ((0 > start % 10) && (start % 10 < 6)))
+        if ((start / 10 == 5) && ((0 < start % 10) && (start % 10 < 6)))
         {
             printf("MASTERCARD\n");
         } else if ((start / 10 == 3) && ((start % 10 == 4) || (start % 10 == 7)))
