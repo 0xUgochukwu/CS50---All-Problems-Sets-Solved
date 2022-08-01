@@ -56,35 +56,35 @@ int main(void)
     {
         printf("INVALID\n");
     } else {
-        if ((total % 10) != 0)
-    {
-        printf("INVALID\n");
-    } else {
-        // Getting the first Digits
-
-        long start = cardNumber;
-
-        do
-        {
-            start /= 10;
-        }
-        while (start > 100);
-
-        // Checking starting Digits for card type
-
-        if ((start / 10 == 5) && ((0 < start % 10) && (start % 10 < 6)))
-        {
-            printf("MASTERCARD\n");
-        } else if ((start / 10 == 3) && ((start % 10 == 4) || (start % 10 == 7)))
-        {
-            printf("AMEX\n");
-        } else if (start / 10 == 4)
-        {
-            printf("VISA\n");
-        } else
+            if ((total % 10) != 0)
         {
             printf("INVALID\n");
+        } else {
+            // Getting the first Digits
+
+            long start = cardNumber;
+
+            do
+            {
+                start /= 10;
+            }
+            while (start > 100);
+
+            // Checking starting Digits for card type
+
+            if ((start / 10 == 5) && ((0 < start % 10) && (start % 10 < 6)))
+            {
+                printf("MASTERCARD\n");
+            } else if ((start / 10 == 3) && ((start % 10 == 4) || (start % 10 == 7)))
+            {
+                printf("AMEX\n");
+            } else if (start / 10 == 4)
+            {
+                printf("VISA\n");
+            } else
+            {
+                printf("INVALID\n");
+            }
         }
-    }
     }
 }
