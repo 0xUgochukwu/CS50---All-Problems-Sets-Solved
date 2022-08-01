@@ -55,9 +55,8 @@ int main(void)
     if (i != 13 && i != 15 && i != 16)
     {
         printf("INVALID\n");
-    }
-
-    if ((total % 10) != 0)
+    } else {
+        if ((total % 10) != 0)
     {
         printf("INVALID\n");
     } else {
@@ -86,5 +85,6 @@ int main(void)
         {
             printf("INVALID\n");
         }
+    }
     }
 }
