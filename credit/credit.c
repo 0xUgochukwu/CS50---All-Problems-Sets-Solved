@@ -25,7 +25,7 @@ int main(void)
     // declaring variables I will need
     int mod1;
     int mod2;
-    int x = cardNumber;
+    long x = cardNumber;
     int sum1 = 0;
     int sum2 = 0;
     int d1;
