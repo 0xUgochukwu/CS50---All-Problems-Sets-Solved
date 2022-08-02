@@ -19,8 +19,15 @@ int main(int argc, string argv[])
     } else
     {
         int key = atoi(argv[1]);
-        // string plain_text = get_string("plaintext:  ");
-        printf("%c\n", rotate('A', key));
+        string plain_text = get_string("plaintext:  ");
+        string cipher_text = "";
+
+        for (int i = 0, n = strlen(plain_text); i < n; i++)
+        {
+            cipher_text += rotate(plain_text[i], key);
+        }
+        
+        printf("ciphertext:  %s\n", cipher_text);
     }
 
 
@@ -45,20 +52,35 @@ int only_digits(string number)
 
 char rotate(char x, int k)
 {
-    string new_x;
+    int overflow_key;
+
     if (x >= 65 && x <= 90)
     {
         x = x + k;
 
+        // Checks if the Character Overflowed and adjusts the Overflow so we always print a Char b/w A - Z
+
         if (x > 90)
         {
-            int overflow_key = x - 90;
-
-            x = 64 + overflow_key;
+            x = 64 + (x - 90); // Adding overflow to the begining of A - Z so it starts counting from a again
         }
 
         return (char) x;
-    } else {
-        return '!';
+    } else if (x >= 97 && x <= 122)
+    {
+        x = x + k;
+
+        // Checks if the Character Overflowed and adjusts the Overflow so we always print a Char b/w a - z
+
+        if (x > 122)
+        {
+            x = 96 + (x - 122); // Adding overflow to the begining of a - z so it starts counting from a again
+        }
+
+        return (char) x;
+    }
+    else
+    {
+        return x;
     }
 }
