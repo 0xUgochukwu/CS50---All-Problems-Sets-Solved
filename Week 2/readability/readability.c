@@ -6,4 +6,8 @@ int main(void)
 
 }
 
-int count_letters(string )
+int count_letters(string text)
+{
+    int letters = 0;
+    for (int i = 0, n = strlen; i  )
+}
