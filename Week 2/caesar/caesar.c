@@ -42,8 +42,14 @@ int only_digits(string number)
 
 char rotate(char x, int k)
 {
+    string new_x;
     if (x >= 65 && x <= 90)
     {
-        
+        x = x + k;
+
+        if (x > 90)
+        {
+            x - 90
+        }
     }
 }
