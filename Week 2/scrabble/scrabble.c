@@ -23,5 +23,14 @@ int main(void)
 
 int compute_score(string word)
 {
-    // TODO: Compute and return score for string
+    int score = 0;
+
+    for(int i = 0, n = strlen(word); i < n; i++)
+    {
+        if ((word[i] >= 65 && word[i] <= 90) || (word[i] >= 97 && word[i] <= 122))
+        {
+            word[i] = toupper(word[i]);
+            score = score + POINTS[word[i] - 65];
+        }
+    }
 }
