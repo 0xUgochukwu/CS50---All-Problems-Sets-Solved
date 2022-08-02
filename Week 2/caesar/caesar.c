@@ -21,8 +21,9 @@ int main(int argc, string argv[])
         int key = atoi(argv[1]);
         // string plain_text = get_string("plaintext:  ");
         printf("%c\n", rotate('Z', key));
-        return 0;
     }
+
+
 }
 
 int only_digits(string number)
@@ -57,5 +58,7 @@ char rotate(char x, int k)
         }
 
         return (char) x;
+    } else {
+        return '!';
     }
 }
