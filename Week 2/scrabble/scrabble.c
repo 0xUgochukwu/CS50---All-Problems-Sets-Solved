@@ -38,7 +38,7 @@ int compute_score(string word)
 {
     int score = 0;
 
-    for(int i = 0, n = strlen(word); i < n; i++)
+    for (int i = 0, n = strlen(word); i < n; i++)
     {
         if ((word[i] >= 65 && word[i] <= 90) || (word[i] >= 97 && word[i] <= 122))
         {
