@@ -14,6 +14,10 @@ int main(int argc, string argv[])
     {
         printf("Usage: ./caesar key\n");
         return 1;
+    } else
+    {
+        string plain_text = get_srting("plaintext:  ")
+        return 0;
     }
 }
 
