@@ -39,6 +39,6 @@ int count_words(string text)
             words++;
         }
     }
-
+    words ++; // To count the last word
     return words;
 }
