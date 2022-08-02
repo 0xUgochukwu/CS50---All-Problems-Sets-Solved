@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 
 int count_letters(string text);
@@ -20,6 +21,7 @@ int main(void)
 
     float index = 0.0588 * L - 0.296 * S - 15.8;
 
+
     if (index < 1)
     {
         printf("Before Grade 1\n");
@@ -27,7 +29,7 @@ int main(void)
     {
         printf("Grade 16+\n");
     } else {
-        printf("Grade %d\n", index);
+        printf("Grade %i\n", (int) round(index));
     }
 }
 
