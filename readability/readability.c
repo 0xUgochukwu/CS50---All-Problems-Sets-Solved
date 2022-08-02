@@ -18,7 +18,7 @@ int main(void)
     float S = (sentences / (float) words) * 100;
 
 
-    int index = 0.0588 * L - 0.296 * S - 15.8;
+    float index = 0.0588 * L - 0.296 * S - 15.8;
 
     if (index < 1)
     {
