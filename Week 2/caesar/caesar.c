@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
+int only_digits(string number);
+
 int main(int argc, string argv[])
 {
     if (argc != 2)
@@ -11,7 +13,7 @@ int main(int argc, string argv[])
     }
     else
     {
-
+        only_digits(argv[1]);
     }
 }
 
@@ -23,6 +25,11 @@ int only_digits(string number)
 
     for (int i = 0; i < n; i++)
     {
-        
+        if (number[i] !>= 0 && number[i] !<= 9)
+        {
+            is_only_digits = false;
+        }
     }
+
+    return is_only_digits;
 }
