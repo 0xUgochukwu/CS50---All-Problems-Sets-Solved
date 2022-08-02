@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     {
         int key = atoi(argv[1]);
         string plain_text = get_string("plaintext:  ");
-        string cipher_text[200] = "";
+        char* cipher_text = NULL;
 
         for (int i = 0, n = strlen(plain_text); i < n; i++)
         {
