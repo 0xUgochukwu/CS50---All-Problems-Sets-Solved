@@ -13,7 +13,7 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
 
-    float L = (letters / words) * 100;
+    float L = (letters / words);
     float S = (sentences / words) * 100;
 
 
