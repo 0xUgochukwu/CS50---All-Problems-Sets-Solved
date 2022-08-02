@@ -53,33 +53,33 @@ int only_digits(string number)
 
 char rotate(char x, int k)
 {
-    int overflow_key;
+    int cipher_char;
 
     if (x >= 65 && x <= 90)
     {
-        x = x + k;
+        cipher_char = x + k;
 
         // Checks if the Character Overflowed and adjusts the Overflow so we always print a Char b/w A - Z
 
-        if (x > 90)
+        if (cipher_char > 90)
         {
-            x = 64 + (x - 90); // Adding overflow to the begining of A - Z so it starts counting from a again
+            cipher_char = 64 + (cipher_char - 90); // Adding overflow to the begining of A - Z so it starts counting from a again
         }
 
-        return (char) x;
+        return (char) cipher_char;
     }
     else if (x >= 97 && x <= 122)
     {
-        x = x + k;
+        cipher_char = x + k;
 
         // Checks if the Character Overflowed and adjusts the Overflow so we always print a Char b/w a - z
 
-        if (x > 122)
+        if (cipher_char > 122)
         {
-            x = 96 + (x - 122); // Adding overflow to the begining of a - z so it starts counting from a again
+            cipher_char = 96 + (cipher_char - 122); // Adding overflow to the begining of a - z so it starts counting from a again
         }
 
-        return (char) x;
+        return (char) cipher_char;
     }
     else
     {
