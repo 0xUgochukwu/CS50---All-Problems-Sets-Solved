@@ -33,7 +33,7 @@ int main(int argc, string argv[])
 
 
 
-char cipher(char x, int k)
+char cipher(char x)
 {
-
+    
 }
