@@ -20,15 +20,15 @@ int main(int argc, string argv[])
     {
         int key = atoi(argv[1]);
         string plain_text = get_string("plaintext:  ");
-        char cipher_text[] = "";
+        string cipher_text = "";
+
+        printf("ciphertext:  ");
 
         for (int i = 0, n = strlen(plain_text); i < n; i++)
         {
-            char ch = rotate(plain_text[i], key);
-            strcat(cipher_text, &ch);
+            printf("%c", rotate(plain_text[i], key));
         }
-
-        printf("ciphertext:  %s\n", cipher_text);
+        printf("\n");
     }
 
 
