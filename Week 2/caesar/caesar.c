@@ -19,8 +19,8 @@ int main(int argc, string argv[])
     } else
     {
         int key = atoi(argv[1]);
-        string plain_text = get_string("plaintext:  ");
-        printf("%c\n", rotate(plain_text));
+        // string plain_text = get_string("plaintext:  ");
+        printf("%c\n", rotate('Z', key));
         return 0;
     }
 }
