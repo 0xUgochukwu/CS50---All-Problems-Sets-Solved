@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 int only_digits(string number);
+char rotate(char x, int k);
 
 int main(int argc, string argv[])
 {
@@ -18,7 +19,8 @@ int main(int argc, string argv[])
     } else
     {
         int key = atoi(argv[1]);
-        string plain_text = get_srting("plaintext:  ")
+        string plain_text = get_string("plaintext:  ");
+        printf("%c\n", rotate(plain_text));
         return 0;
     }
 }
@@ -53,5 +55,7 @@ char rotate(char x, int k)
 
             x = 65 + overflow_key;
         }
+
+        return (char) x;
     }
 }
