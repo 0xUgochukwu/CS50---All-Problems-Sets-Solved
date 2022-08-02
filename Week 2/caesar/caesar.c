@@ -12,11 +12,13 @@ int main(int argc, string argv[])
     {
         printf("Usage: ./caesar key\n");
         return 1;
-    } else if (!(only_digits(argv[1])))
+    }
+    else if (!(only_digits(argv[1])))
     {
         printf("Usage: ./caesar key\n");
         return 1;
-    } else
+    }
+    else
     {
         int key = atoi(argv[1]) % 26;
         string plain_text = get_string("plaintext:  ");
