@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        int key = atoi(argv[1]) % 26;
+        int key = argv[1];
         string plain_text = get_string("plaintext:  ");
         string cipher_text = "";
 
@@ -36,55 +36,9 @@ int main(int argc, string argv[])
 
 }
 
-int only_digits(string number)
+
+
+char cipher(char x, int k)
 {
-    bool is_only_digits = true;
-    int n = strlen(number);
-
-
-    for (int i = 0; i < n; i++)
-    {
-        if (!(number[i] >= 48 && number[i] <= 57))
-        {
-            is_only_digits = false;
-        }
-    }
-
-    return is_only_digits;
-}
-
-char rotate(char x, int k)
-{
-    int cipher_char;
-
-    if (x >= 65 && x <= 90)
-    {
-        cipher_char = x + k;
-
-        // Checks if the Character Overflowed and adjusts the Overflow so we always print a Char b/w A - Z
-
-        if (cipher_char > 90)
-        {
-            cipher_char = 64 + (cipher_char - 90); // Adding overflow to the begining of A - Z so it starts counting from a again
-        }
-
-        return (char) cipher_char;
-    }
-    else if (x >= 97 && x <= 122)
-    {
-        cipher_char = x + k;
-
-        // Checks if the Character Overflowed and adjusts the Overflow so we always print a Char b/w a - z
-
-        if (cipher_char > 122)
-        {
-            cipher_char = 96 + (cipher_char - 122); // Adding overflow to the begining of a - z so it starts counting from a again
-        }
-
-        return (char) cipher_char;
-    }
-    else
-    {
-        return x;
-    }
+    
 }
