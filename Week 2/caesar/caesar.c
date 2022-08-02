@@ -39,3 +39,11 @@ int only_digits(string number)
 
     return is_only_digits;
 }
+
+char rotate(char x, int k)
+{
+    if (x >= 65 && x <= 90)
+    {
+        
+    }
+}
