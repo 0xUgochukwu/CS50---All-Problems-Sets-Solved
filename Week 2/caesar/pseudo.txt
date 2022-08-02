@@ -1,0 +1,11 @@
+Get Argument from command Line
+Authenticate the arguments comming from CL to make sure an argument is imputed and it is only one
+Check if the argument is a number
+Convert it from String to Int
+Prompt user for text
+Cipher text:
+Loop through all characters
+Check if it letter
+check if it is in uppercase or lowercase
+rotate the character
+Print the text
