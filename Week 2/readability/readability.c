@@ -25,7 +25,7 @@ int main(void)
     {
         printf("Grade 16+");
     } else {
-        printf("Grade %i\n", (int) index);
+        printf("Grade %i, L: %f, S: %f \n", (int) index, L, S);
     }
 }
 
