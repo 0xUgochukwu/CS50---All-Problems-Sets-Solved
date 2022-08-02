@@ -42,3 +42,15 @@ int count_words(string text)
     words ++; // To count the last word
     return words;
 }
+
+int count_sentences(string text)
+{
+    int sentences = 0;
+    for (int i = 0, n = strlen(text); i < n; i++)
+    {
+        if (text[i] == 46 || text[i] == 33 || text[i] == 63)
+        {
+            sentences++;
+        }
+    }
+}
