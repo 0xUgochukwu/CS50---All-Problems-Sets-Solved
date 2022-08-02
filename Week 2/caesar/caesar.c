@@ -13,19 +13,19 @@ int main(int argc, string argv[])
     }
     else
     {
-        only_digits(argv[1]);
+        printf("%i", only_digits(argv[1]));
     }
 }
 
 int only_digits(string number)
 {
-    bool is_only_didits = true;
+    bool is_only_digits = true;
     int n = strlen(number);
 
 
     for (int i = 0; i < n; i++)
     {
-        if (number[i] !>= 0 && number[i] !<= 9)
+        if (!(number[i] >= 0) && !(number[i] <= 9))
         {
             is_only_digits = false;
         }
