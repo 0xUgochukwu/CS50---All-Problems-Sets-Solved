@@ -13,11 +13,6 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    else if (!(only_digits(argv[1])))
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
     else
     {
         int key = argv[1];
@@ -28,7 +23,7 @@ int main(int argc, string argv[])
 
         for (int i = 0, n = strlen(plain_text); i < n; i++)
         {
-            printf("%c", rotate(plain_text[i], key));
+            printf("%c", rotate(plain_text[i]));
         }
         printf("\n");
     }
@@ -40,5 +35,5 @@ int main(int argc, string argv[])
 
 char cipher(char x, int k)
 {
-    cipher_char (int) x
+
 }
