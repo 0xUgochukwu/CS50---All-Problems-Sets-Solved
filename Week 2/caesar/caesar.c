@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     {
         int key = atoi(argv[1]);
         // string plain_text = get_string("plaintext:  ");
-        printf("%c\n", rotate('Z', key));
+        printf("%c\n", rotate('A', key));
     }
 
 
@@ -54,7 +54,7 @@ char rotate(char x, int k)
         {
             int overflow_key = x - 90;
 
-            x = 65 + overflow_key;
+            x = 64 + overflow_key;
         }
 
         return (char) x;
