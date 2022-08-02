@@ -19,7 +19,7 @@ int main(void)
     float S = (sentences / (float) words) * 100;
 
 
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    int index = round(0.0588 * L - 0.296 * S - 15.8);
 
 
     if (index < 1)
@@ -29,7 +29,7 @@ int main(void)
     {
         printf("Grade 16+\n");
     } else {
-        printf("Grade %i\n", (int) round(index));
+        printf("Grade %i\n", index);
     }
 }
 
