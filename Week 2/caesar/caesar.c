@@ -67,7 +67,8 @@ char rotate(char x, int k)
         }
 
         return (char) x;
-    } else if (x >= 97 && x <= 122)
+    }
+    else if (x >= 97 && x <= 122)
     {
         x = x + k;
 
