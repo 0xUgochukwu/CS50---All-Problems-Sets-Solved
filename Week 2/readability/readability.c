@@ -16,6 +16,9 @@ int main(void)
     float L = (letters / words) * 100;
     float S = (sentences / words) * 100;
 
+    printf("%.2f\n", L);
+    printf("%.2f\n", S);
+
     int index = 0.0588 * L - 0.296 * S - 15.8;
 
     if (index < 1)
