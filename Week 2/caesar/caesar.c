@@ -21,11 +21,10 @@ int main(int argc, string argv[])
         int key = atoi(argv[1]);
         string plain_text = get_string("plaintext:  ");
         string cipher_text = "";
-        char ch;
 
         for (int i = 0, n = strlen(plain_text); i < n; i++)
         {
-            ch = rotate(plain_text[i], key);
+            char ch = rotate(plain_text[i], key);
             strncat(cipher_text, &ch, 1);
         }
 
