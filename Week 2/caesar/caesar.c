@@ -24,7 +24,7 @@ int main(int argc, string argv[])
 
         for (int i = 0, n = strlen(plain_text); i < n; i++)
         {
-            strncat(cipher_text, rotate(plain_text[i], key), 1);
+            strncat(cipher_text, &rotate(plain_text[i], key), 1);
         }
 
         printf("ciphertext:  %s\n", cipher_text);
