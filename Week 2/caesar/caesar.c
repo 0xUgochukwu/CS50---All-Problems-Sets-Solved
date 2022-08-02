@@ -50,9 +50,8 @@ char rotate(char x, int k)
         if (x > 90)
         {
             int overflow_key = x - 90;
-            
 
-
+            x = 65 + overflow_key;
         }
     }
 }
