@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("%i", only_digits(argv[1]));
+        printf("%i\n", only_digits(argv[1]));
     }
 }
 
