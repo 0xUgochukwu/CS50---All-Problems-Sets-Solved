@@ -8,7 +8,7 @@ int main(void)
 {
     string text = get_string("Text: ");
     int n = count_letters(text);
-    printf("%i", n);
+    printf("%i \n", n);
 }
 
 int count_letters(string text)
@@ -16,7 +16,7 @@ int count_letters(string text)
     int letters = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (text[i] > 97 && text[i] < )
+        if ((text[i] >= 97 && text[i] <= 122) || (text[i] >= 65 && text[i] <= 90))
         {
             letters ++;
         }
