@@ -11,6 +11,9 @@ int main(void)
     printf("%i \n", n);
 }
 
+
+
+
 int count_letters(string text)
 {
     int letters = 0;
@@ -23,4 +26,9 @@ int count_letters(string text)
     }
 
     return letters;
+}
+
+int count_words(string text)
+{
+    
 }
