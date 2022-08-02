@@ -16,16 +16,16 @@ int main(void)
     float L = (letters / words) * 100;
     float S = (sentences / words) * 100;
 
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    int index = 0.0588 * L - 0.296 * S - 15.8;
 
     if (index < 1)
     {
-        printf("Before Grade 1");
+        printf("Before Grade 1 %i", index);
     } else if (index >= 16)
     {
         printf("Grade 16+");
     } else {
-        printf("Grade %i, L: %f, S: %f \n", (int) index, L, S);
+        printf("Grade %i\n", index);
     }
 }
 
