@@ -40,5 +40,5 @@ int main(int argc, string argv[])
 
 char cipher(char x, int k)
 {
-    
+    cipher_char (int) x
 }
