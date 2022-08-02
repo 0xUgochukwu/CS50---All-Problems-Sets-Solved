@@ -18,7 +18,7 @@ int main(int argc, string argv[])
         return 1;
     } else
     {
-        int key = atoi(argv[1]);
+        int key = atoi(argv[1]) % 26;
         string plain_text = get_string("plaintext:  ");
         string cipher_text = "";
 
