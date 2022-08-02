@@ -20,7 +20,7 @@ int main(void)
 
     // TODO: Print the winner
 
-    printf("%i %i", score1, score2);
+    printf("%i %i\n", score1, score2);
 }
 
 int compute_score(string word)
