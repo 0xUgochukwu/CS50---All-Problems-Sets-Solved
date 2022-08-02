@@ -25,7 +25,7 @@ int only_digits(string number)
 
     for (int i = 0; i < n; i++)
     {
-        if (!(number[i] >= 0) && !(number[i] <= 9))
+        if (!(number[i] >= 0 && number[i] <= 9))
         {
             is_only_digits = false;
         }
