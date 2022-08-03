@@ -1,6 +1,7 @@
-sort1 uses: TODO
+sort1 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?: It used the least number of time in the best carse senario because for bubble sort Ω(n)
+
 
 sort2 uses: TODO
 
