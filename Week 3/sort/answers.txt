@@ -3,10 +3,10 @@ sort1 uses: Bubble Sort
 How do you know?: It took significantly less time to sort in the best case senario because for bubble sort the best case complexity is Ω(n) which is the least out of the three
 
 
-sort2 uses: Selection Sort
+sort2 uses: Merge Sort
 
 How do you know?: Since sort1 is out of the options now, this one took significantly more time to sort a random set of numbers because it has a higher time complexity
 
-sort3 uses: Merge Sort
+sort3 uses: Selection Sort
 
 How do you know?: Thito sorts sort algorithm took the least time to sort a random set of numbers
