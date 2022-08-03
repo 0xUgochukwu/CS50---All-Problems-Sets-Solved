@@ -9,4 +9,4 @@ How do you know?: Since sort1 is out of the options now, this one took significa
 
 sort3 uses: Merge Sort
 
-How do you know?: Thito sorts sort algorithm took the least time
+How do you know?: Thito sorts sort algorithm took the least time to sort a random set of numbers
