@@ -90,6 +90,10 @@ void print_winner(void)
         {
             winner = candidates[i].name;
         }
+        else if
+        {
+            
+        }
     }
 
     printf("%s\n", winner);
