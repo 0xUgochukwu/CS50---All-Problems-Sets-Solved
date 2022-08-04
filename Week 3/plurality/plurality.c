@@ -92,6 +92,6 @@ void print_winner(void)
         }
     }
 
-    printf("%s", winner);
+    printf("%s\n", winner);
     return;
 }
