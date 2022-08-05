@@ -150,6 +150,7 @@ void tabulate(void)
             if (!candidates[j].eliminated)
             {
                 candidates[preferences[i][j]].votes++;
+                break;
             }
         }
     }
