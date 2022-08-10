@@ -2,6 +2,7 @@
   "extensions": [
     "/opt/cs50/extensions/cs50-0.0.1.vsix", 
     "/opt/cs50/extensions/phpliteadmin-0.0.1.vsix", 
+    "/opt/cs50/extensions/gitdoc-0.0.9.vsix", 
     "/opt/cs50/extensions/workspace-layout-0.0.7.vsix", 
     "cs50.ddb50", 
     "cs50.extension-uninstaller", 
@@ -10,10 +11,9 @@
     "ms-vscode.cpptools", 
     "ms-vscode.hexeditor", 
     "ms-vsliveshare.vsliveshare-pack", 
-    "tomoki1207.pdf", 
-    "vsls-contrib.gitdoc"
+    "tomoki1207.pdf"
   ], 
-  "image": "ghcr.io/cs50/codespace:ea2154dd6fa770b16ddd647e258d989c51350f16", 
+  "image": "ghcr.io/cs50/codespace:bf4064f7fb28ce013e6c4585ed3f400992a682fb", 
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand", 
   "settings": {
     "C_Cpp.autocomplete": "Disabled", 
@@ -99,6 +99,7 @@
       }
     }, 
     "terminal.integrated.sendKeybindingsToShell": true, 
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never", 
     "terminal.integrated.tabs.description": "${task}${separator}${local}", 
     "terminal.integrated.tabs.showActiveTerminal": "never", 
     "window.autoDetectColorScheme": true, 
