@@ -50,7 +50,17 @@ person *create_family(int generations)
 
         // TODO: Set parent pointers for current person
 
+        person *current_person;
+
+        current_person.parents[0] = parent0;
+        current_person.parents[1] = parent1;
+
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
+
+        int r1 = rand() % 2;
+        current_person.alleles[0] = parent[0].alleles[r1];
+        
+
 
     }
 
