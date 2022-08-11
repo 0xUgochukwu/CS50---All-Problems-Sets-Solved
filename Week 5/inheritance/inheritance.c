@@ -92,7 +92,7 @@ void free_family(person *p)
     // TODO: Free parents recursively
     if (p.parents[0] != NULL)
     {
-        free
+        free_family(p);
     }
 
     // TODO: Free child
