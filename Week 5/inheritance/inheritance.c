@@ -59,7 +59,10 @@ person *create_family(int generations)
 
         int r1 = rand() % 2;
         current_person.alleles[0] = parent[0].alleles[r1];
-        
+
+        int r2 = rand() % 2;
+        current_person.alleles[1] = parent[0].alleles[r2];
+
 
 
     }
