@@ -1,11 +1,15 @@
-// Implements a dictionary's functionality
-
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
 
 #include "dictionary.h"
 
-// Represents a node in a hash table
+#define HASHTABLE_SIZE 10000
+
+// Defines struct for a node
 typedef struct node
 {
     char word[LENGTH + 1];
@@ -13,25 +17,23 @@ typedef struct node
 }
 node;
 
-// TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+node *hashtable[HASHTABLE_SIZE];
 
-// Hash table
-node *table[N];
-
-// Returns true if word is in dictionary, else false
-bool check(const char *word)
+// Hashes the word (hash function posted on reddit by delipity)
+// The word you want to hash is contained within new node, arrow, word.
+// Hashing that will give you the index. Then you insert word into linked list.
+int hash_index(char *hash_this)
 {
-    // TODO
-    return false;
+    unsigned int hash = 0;
+    for (int i = 0, n = strlen(hash_this); i < n; i++)
+    {
+        hash = (hash << 2) ^ hash_this[i];
+    }
+    return hash % HASHTABLE_SIZE;
 }
 
-// Hashes word to a number
-unsigned int hash(const char *word)
-{
-    // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
-}
+// Initializes counter for words in dictionary
+int word_count = 0;
 
 // Loads dictionary into memory, returning true if successful else false
 bool load(const char *dictionary)
