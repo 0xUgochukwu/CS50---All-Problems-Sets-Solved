@@ -32,8 +32,8 @@ int hash_index(char *hash_this)
     return hash % HASHTABLE_SIZE;
 }
 
-// count read words
-int total_words = 0;
+// Initializes counter for words in dictionary
+int counter = 0;
 
 // Loads dictionary into memory, returning true if successful else false
 bool load(const char *dictionary)
@@ -85,29 +85,38 @@ bool load(const char *dictionary)
 // Returns true if word is in dictionary else false
 bool check(const char *word)
 {
-    // make word lower case for hash function
-    int len = strlen(word);
-    char lword[len + 1];
-    for (int i = 0; i < len; i++)
+    // Creates copy of word on which hash function can be performed
+    int n = strlen(word);
+    char word_copy[LENGTH + 1];
+    for (int i = 0; i < n; i++)
     {
-        lword[i] = tolower(word[i]);
+        word_copy[i] = tolower(word[i]);
     }
-    lword[len] = '\0';
+    // Adds null terminator to end string
+    word_copy[n] = '\0';
+    // Initializes index for hashed word
+    int h = hash_index(word_copy);
+    // Sets cursor to point to same address as hashtable index/bucket
+    node *cursor = hashtable[h];
+    // Sets cursor to point to same location as head
 
-    int index = hash(lword);
-    node *cursor = table[index];
+    // If the word exists, you should be able to find in dictionary data structure.
+    // Check for word by asking, which bucket would word be in? hashtable[hash(word)]
+    // While cursor does not point to NULL, search dictionary for word.
     while (cursor != NULL)
     {
-        if (strcasecmp(cursor->word, word) != 0)
-        {
-            cursor = cursor->next;
-        }
-        else
+        // If strcasecmp returns true, then word has been found
+        if (strcasecmp(cursor->word, word_copy) == 0)
         {
             return true;
         }
-
+        // Else word has not yet been found, advance cursor
+        else
+        {
+            cursor = cursor->next;
+        }
     }
+    // Cursor has reached end of list and word has not been found in dictionary so it must be misspelled
     return false;
 }
 
