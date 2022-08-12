@@ -33,7 +33,7 @@ int hash_index(char *hash_this)
 }
 
 // Initializes counter for words in dictionary
-int counter = 0;
+int word_counter = 0;
 
 // Loads dictionary into memory, returning true if successful else false
 bool load(const char *dictionary)
@@ -69,13 +69,13 @@ bool load(const char *dictionary)
         if (head == NULL)
         {
             hashtable[h] = n_node;
-            word_count++;
+            word_counter++;
         }
         else
         {
             n_node->next = hashtable[h];
             hashtable[h] = n_node;
-            counter++;
+            word_counter++;
         }
     }
     fclose(file);
@@ -123,7 +123,7 @@ bool check(const char *word)
 // Returns number of words in dictionary if loaded else 0 if not yet loaded
 unsigned int size(void)
 {
-    return word_count;
+    return word_counter;
 }
 
 // Unloads dictionary from memory, returning true if successful else false
