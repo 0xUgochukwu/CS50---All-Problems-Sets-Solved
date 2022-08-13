@@ -20,8 +20,7 @@ def main():
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         for row in reader:
-            team = {}
-            team["team"] =
+            team = {"team": row["team"], "rating": int(row["rating"])}
             teams.append(team)
 
 
@@ -30,7 +29,7 @@ def main():
     # TODO: Simulate N tournaments and keep track of win counts
 
     for i in range(N):
-        winner = simulate_tournament(team[].keys() for team in teams)
+        winner = simulate_tournament(team["team"] for team in teams)
         if winner in counts:
             counts[winner] += 1
         else:
