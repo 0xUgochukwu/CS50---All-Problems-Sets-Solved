@@ -20,7 +20,8 @@ def main():
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         for row in reader:
-            team = {row["team"]: int(row["rating"])}
+            team = {}
+            team["team"] =
             teams.append(team)
 
 
