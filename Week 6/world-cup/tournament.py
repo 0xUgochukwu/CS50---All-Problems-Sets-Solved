@@ -65,7 +65,8 @@ def simulate_tournament(teams):
         winner = simulate_game(teams[0], teams[1])
         return winner
     else:
-        
+        simulate_tournament(winners)
+
 
 
 
