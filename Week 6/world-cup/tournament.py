@@ -60,8 +60,11 @@ def simulate_tournament(teams):
     # TODO
 
     if len(teams) == 2:
-        simulate_game(teams[0], teams[1])
-    elif
+        winner = simulate_game(teams[0], teams[1])
+        return winner
+    else:
+        
+
 
 
 if __name__ == "__main__":
