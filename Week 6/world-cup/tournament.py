@@ -23,8 +23,6 @@ def main():
             team = {"team": row["team"], "rating": int(row["rating"])}
             teams.append(team)
 
-
-
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
 
@@ -73,9 +71,6 @@ def simulate_tournament(teams):
     else:
         winner = teams[0]["team"]
         return winner
-
-
-
 
 
 if __name__ == "__main__":
