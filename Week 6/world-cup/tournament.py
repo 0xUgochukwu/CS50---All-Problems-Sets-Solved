@@ -21,8 +21,7 @@ def main():
         reader = csv.DictReader(file);
         for row in reader:
             team = row["team"]
-            rating = row["rating"]
-            teams[team: rating] += 1
+            teams[team] += 1
 
 
 
