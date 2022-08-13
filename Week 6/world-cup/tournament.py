@@ -20,7 +20,7 @@ def main():
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         for row in reader:
-            team = {row["team"]: row["rating"]}
+            team = {row["team"]: int(row["rating"])}
             teams.append(team)
 
 
@@ -28,7 +28,7 @@ def main():
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
 
-    for i in range(0, N):
+    for i in range(N):
         winner = simulate_tournament(team[].keys() for team in teams)
 
     # Print each team's chances of winning, according to simulation
