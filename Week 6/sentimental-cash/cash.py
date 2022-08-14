@@ -5,15 +5,15 @@ from cs50 import get_float
 
 coins = 0
 
-# Prompt user for the amount
+# Prompt user for the change
 
 while True:
-    amount = get_float("How many cents? ")
-    if amount > 0:
+    change = get_float("Change Owed: ")
+    if change > 0:
         break
 
 # Convert the amount to cents
-cents = round(int(amount * 100))
+cents = round(int(change * 100))
 
 # find out how many coins
 
