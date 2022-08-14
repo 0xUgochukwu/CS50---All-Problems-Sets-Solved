@@ -8,9 +8,11 @@ coins = 0
 # Prompt user for the amount
 
 while True:
-    amount = round(int(get_float("How many cents? ")))
+    amount = get_float("How many cents? ")
     if amount > 0:
         break
+
+# Convert the amount to cents
 
 
 # find out how many coins
