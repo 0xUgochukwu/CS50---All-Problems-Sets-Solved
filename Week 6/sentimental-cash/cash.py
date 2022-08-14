@@ -26,7 +26,7 @@ while cents > 0:
         cents -= 10
     while cents >= 5:
         coins += 1
-        cents -= 25
+        cents -= 5
     while cents >= 1:
         coins += 1
         cents -= 1
