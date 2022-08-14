@@ -13,23 +13,23 @@ while True:
         break
 
 # Convert the amount to cents
-
+cents = round(int(amount * 100))
 
 # find out how many coins
 
-while amount > 0:
-    while amount >= 25:
+while cents > 0:
+    while cents >= 25:
         coins += 1
-        amount -= 25
-    while amount >= 10:
+        cents -= 25
+    while cents >= 10:
         coins += 1
-        amount -= 10
-    while amount >= 5:
+        cents -= 10
+    while cents >= 5:
         coins += 1
-        amount -= 25
-    while amount >= 1:
+        cents -= 25
+    while cents >= 1:
         coins += 1
-        amount -= 1
+        cents -= 1
 
 
 print(coins)
