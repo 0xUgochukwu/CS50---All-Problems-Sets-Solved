@@ -3,6 +3,7 @@
 from cs50 import get_string
 import re
 
+
 def main():
     text = get_string("Text: ")
     letters = count_letters(text)
@@ -31,16 +32,17 @@ def count_letters(text):
 
     return letters
 
+
 def count_words(text):
     words = text.split()
 
     return len(words)
 
+
 def count_sentences(text):
     sentences = re.split(r'[.!?]+', text)
 
     return len(sentences) - 1
-
 
 
 if __name__ == '__main__':
