@@ -33,10 +33,10 @@ while True:
 # Totaling the two sums
 total = sum1 + sum2
 
-# Counting how many numbers are in the card
-card
+# Checking the length of the card number are in the card
+cardLength = len(cardNumber)
 
-if (count != 13 and count != 15 and count != 16):
+if (cardLength != 13 and cardLength != 15 and cardLength != 16):
     print("INVALID")
 else:
     if total % 10 != 0:
