@@ -15,11 +15,9 @@ def main():
         reader = DictReader(csvfile)
         dict_list = list(reader)
 
-
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as file:
         sequence = file.read()
-
 
     # TODO: Find longest match of each STR in DNA sequence
     max_counts = []
@@ -58,6 +56,7 @@ def main():
                 sys.exit(0)
 
     print("No Match")
+
 
 main()
 
