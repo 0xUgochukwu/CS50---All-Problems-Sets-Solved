@@ -28,7 +28,8 @@ total = sum1 + sum2
 
 count = 0
 cc = cardNumber
- while cc > 0:
+
+while cc > 0:
     cc //= 10
     count += 1
 
@@ -51,6 +52,7 @@ else:
             print("AMEX")
         elif  start // 10 == 4:
             print("VISA")
-        else print("INVALID")
+        else:
+            print("INVALID")
 
 
