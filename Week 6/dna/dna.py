@@ -12,7 +12,7 @@ def main():
 
     # TODO: Read database file into a variable
     with open(sys.argv[1], "r") as file:
-        reader = DictReader(file)
+        reader = csv.DictReader(file)
 
 
     # TODO: Read DNA sequence file into a variable
@@ -22,7 +22,7 @@ def main():
             agat = 0
             aatg = 0
             tatc = 0
-            if 
+            if
 
     # TODO: Find longest match of each STR in DNA sequence
 
