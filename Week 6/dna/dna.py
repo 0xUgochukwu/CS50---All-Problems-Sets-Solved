@@ -20,11 +20,13 @@ def main():
     with open(sys.argv[2], "r") as file:
         sequence = file.read()
 
-    max_counts = []
-
-
 
     # TODO: Find longest match of each STR in DNA sequence
+    max_counts = []
+
+    for i in range(1, len(csv.reader.fieldnames)):
+        STR = reader.filednames[i]
+        max_counts.append(0)
 
     # TODO: Check database for matching profiles
 
