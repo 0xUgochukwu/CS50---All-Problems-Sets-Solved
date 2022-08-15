@@ -27,3 +27,11 @@ def count_letters(text):
     for i in text:
         if (/[a-zA-Z]/).test(i):
             letters += 1
+
+    return letters
+
+# def count_words(text):
+#     words = 0
+
+#     for i in text:
+#         if
