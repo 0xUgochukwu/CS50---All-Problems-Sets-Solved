@@ -1,6 +1,7 @@
 # TODO
 
 from cs50 import get_string
+import re
 
 def main():
     text = get_string("Text: ")
@@ -32,6 +33,14 @@ def count_letters(text):
 
 def count_words(text):
     words = text.split()
+
+    return len(words)
+
+def count_sentences(text):
+    sentences = re.split(r'[.!?]+', text)
+
+    return len(sentences)
+
 
 
 main()
