@@ -34,12 +34,28 @@ def main():
 
             # if the STR is found check if next one is a match and start counting repeats
             if sequence[j:(j + len(STR))] == STR:
+                # k helps you get the next STR from j because you don't want to always go back to j
                 k = 0
                 while sequence[(j + k): (j + k + len(STR))] == STR:
                     STR_count += 1
                     k += len(STR)
 
+                    # If new maximum of repeats, update max_counts
+                    if STR_count > max_counts[i - 1]:
+                        max_counts[i - 1] = STR_count
+
     # TODO: Check database for matching profiles
+
+    for i in range(len(dict_list)):
+        matches = 0
+        for j in range(1, len(reader.fieldnames)):
+            # Check for matches in database against max_counts
+            if int(maxcounts[j - 1] == int(dict_list[i][reader.fieldnames[j]])):
+                matches += 1
+            # Check if all the fields match using the length of the array
+            if matches == (len(reader.fieldnames) - 1):
+                
+
 
     return
 
