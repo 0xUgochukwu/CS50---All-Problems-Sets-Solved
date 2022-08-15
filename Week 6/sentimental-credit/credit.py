@@ -33,10 +33,15 @@ while True:
 # Totaling the two sums
 total = sum1 + sum2
 
-# Checking the length of the card number are in the card
-cardLength = len(cardNumber)
+# Counting how many numbers are in the card
+cardLen = 0
+cc = cardNumber
 
-if (cardLength != 13 and cardLength != 15 and cardLength != 16):
+while cc > 0:
+    cc //= 10
+    cardLen += 1
+
+if (cardLen != 13 and cardLen != 15 and cardLen != 16):
     print("INVALID")
 else:
     if total % 10 != 0:
@@ -49,7 +54,7 @@ else:
             if start < 100:
                 break
 
-        if start // 10 == 5 and start % 10 in range(1, 5):
+        if start // 10 == 5 and start % 10 in range(1, 6):
             print("MASTERCARD")
         elif start // 10 == 3 and (start % 10 == 4 or start % 10 == 7):
             print("AMEX")
