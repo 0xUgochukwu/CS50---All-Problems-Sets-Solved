@@ -31,10 +31,7 @@ def count_letters(text):
     return letters
 
 def count_words(text):
-    words = 0
-
-    for i in text:
-        if 
+    words = text.split()
 
 
 main()
