@@ -14,12 +14,12 @@ def main():
 
     index = round(0.0588 * L - 0.296 * S - 15.8)
 
-    # if index < 1:
-    #     print("Before Grade 1")
-    # elif index >= 16:
-    #     print("Grade 16+")
-    # else:
-    #     print(f"Grade {index}")
+    if index < 1:
+        print("Before Grade 1")
+    elif index >= 16:
+        print("Grade 16+")
+    else:
+        print(f"Grade {index}")
 
 
 def count_letters(text):
@@ -38,7 +38,7 @@ def count_words(text):
 
 def count_sentences(text):
     sentences = re.split(r'[.!?]+', text)
-    print(sentences)
+
     return len(sentences) - 1
 
 
