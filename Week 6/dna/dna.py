@@ -29,7 +29,15 @@ def main():
         max_counts.append(0)
 
         # Loop through squence to find the current STR
-        for j in range(len(sequence))
+        for j in range(len(sequence)):
+            STR_count = 0
+
+            # if the STR is found check if next one is a match and start counting repeats
+            if sequence[j:(j + len(STR))] == STR:
+                k = 0
+                while sequence[(j + k): (j + k + len(STR))] == STR:
+                    STR_count += 1
+                    k += len(STR)
 
     # TODO: Check database for matching profiles
 
