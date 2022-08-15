@@ -1,7 +1,9 @@
 # TODO
 
+from cs50 import get_string
+
 def main():
-    text = input("Text: ")
+    text = get_string("Text: ")
     letters = count_letters(text)
     words = count_words(text)
     sentences = count_sentences(text)
@@ -23,4 +25,3 @@ def count_letters(text):
     letters = 0
 
     for i in text:
-        
