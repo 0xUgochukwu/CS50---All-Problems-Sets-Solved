@@ -13,16 +13,17 @@ def main():
     # TODO: Read database file into a variable
     with open(sys.argv[1], "r") as csvfile:
         reader = csv.DictReader(csvfile)
+        print(reader)
+        dict_list = list(reader)
 
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as file:
-        reader = file.read()
-        for i in range(0, len(reader), 4):
-            agat = 0
-            aatg = 0
-            tatc = 0
-            if
+        sequence = file.read()
+
+    max_counts = []
+    
+
 
     # TODO: Find longest match of each STR in DNA sequence
 
