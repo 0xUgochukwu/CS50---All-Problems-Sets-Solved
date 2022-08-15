@@ -58,9 +58,7 @@ else:
             print("MASTERCARD")
         elif start // 10 == 3 and (start % 10 == 4 or start % 10 == 7):
             print("AMEX")
-        elif  start // 10 == 4:
+        elif start // 10 == 4:
             print("VISA")
         else:
             print("INVALID")
-
-
