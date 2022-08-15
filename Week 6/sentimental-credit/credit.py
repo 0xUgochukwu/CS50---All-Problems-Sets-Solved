@@ -35,5 +35,5 @@ cc = cardNumber
 if (count != 13 and count != 15 and count != 16):
     print("INVALID")
 else:
-    
+    if t
 
