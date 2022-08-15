@@ -19,7 +19,7 @@ while True:
     mod2 = mod2 * 2
     d1 = mod2 % 10
     d2 = mod2 // 10
-    sum2 = d1 + d2
+    sum2 = sum2 + d1 + d2
 
     if x <= 0:
         break
