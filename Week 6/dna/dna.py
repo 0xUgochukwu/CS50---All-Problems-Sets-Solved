@@ -1,4 +1,4 @@
-import csv
+from csv import reader, DictReader
 import sys
 
 
@@ -12,8 +12,9 @@ def main():
 
     # TODO: Read database file into a variable
     with open(sys.argv[1], "r") as csvfile:
-        reader = csv.DictReader(csvfile)
+        reader = DictReader(csvfile)
         dict_list = list(reader)
+        print(dict_list)
 
 
     # TODO: Read DNA sequence file into a variable
@@ -24,8 +25,8 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     max_counts = []
 
-    for i in range(1, len(csv.reader.fieldnames)):
-        STR = csv.reader.fieldnames[i]
+    for i in range(1, len(reader.fieldnames)):
+        STR = reader.fieldnames[i]
         print(STR)
         max_counts.append(0)
 
