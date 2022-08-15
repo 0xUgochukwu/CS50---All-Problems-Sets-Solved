@@ -37,5 +37,6 @@ if (count != 13 and count != 15 and count != 16):
 else:
     if total % 10 != 0:
         print("INVALID")
+    else:
         
 
