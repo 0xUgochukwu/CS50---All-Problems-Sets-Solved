@@ -25,7 +25,7 @@ def count_letters(text):
     letters = 0
 
     for i in text:
-        if (/[a-zA-Z]/).test(i):
+        if i.isalpha():
             letters += 1
 
     return letters
@@ -35,3 +35,6 @@ def count_letters(text):
 
 #     for i in text:
 #         if
+
+
+main()
