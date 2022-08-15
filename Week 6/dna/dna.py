@@ -26,8 +26,10 @@ def main():
 
     for i in range(1, len(reader.fieldnames)):
         STR = reader.fieldnames[i]
-        print(STR)
         max_counts.append(0)
+
+        # Loop through squence to find the current STR
+        for j in range(len())
 
     # TODO: Check database for matching profiles
 
