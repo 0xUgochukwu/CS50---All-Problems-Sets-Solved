@@ -38,5 +38,19 @@ else:
     if total % 10 != 0:
         print("INVALID")
     else:
-        
+        start = cardNumber
+
+        while True:
+            start //= 10
+            if start < 100:
+                break
+
+        if start // 10 == 5 and start % 10 in range(1, 5):
+            print("MASTERCARD")
+        elif start // 10 == 3 and (start % 10 == 4 or start % 10 == 7):
+            print("AMEX")
+        elif  start // 10 == 4:
+            print("VISA")
+        else print("INVALID")
+
 
