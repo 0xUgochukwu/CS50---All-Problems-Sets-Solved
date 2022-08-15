@@ -47,7 +47,7 @@ int main(void)
     long cc = cardNumber;
     while (cc > 0)
     {
-        cc = cc / 10;
+        cc /= 10;
         i++;
     }
 

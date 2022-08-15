@@ -4,7 +4,7 @@ from cs50 import get_int
 
 cardNumber = get_int("Number: ")
 
-cardNumber = x
+x = cardNumber
 sum1 = 0
 sum2 = 0
 
@@ -26,5 +26,14 @@ while True:
 
 total = sum1 + sum2
 
+count = 0
+cc = cardNumber
+ while cc > 0:
+    cc //= 10
+    count += 1
 
+if (count != 13 and count != 15 and count != 16):
+    print("INVALID")
+else:
+    
 
