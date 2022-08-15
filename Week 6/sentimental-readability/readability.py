@@ -25,3 +25,5 @@ def count_letters(text):
     letters = 0
 
     for i in text:
+        if (/[a-zA-Z]/).test(i):
+            letters += 1
