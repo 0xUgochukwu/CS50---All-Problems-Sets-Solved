@@ -37,7 +37,7 @@ if (count != 13 and count != 15 and count != 16):
     print("INVALID")
 else:
     if total % 10 != 0:
-        print("INVALID")
+        print("h INVALID")
     else:
         start = cardNumber
 
