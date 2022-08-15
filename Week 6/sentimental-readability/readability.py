@@ -10,7 +10,7 @@ def main():
     sentences = count_sentences(text)
 
     L = (letters / words) * 100
-    S = (letters / sentences) * 100
+    S = (sentences / words) * 100
 
     index = round(0.0588 * L - 0.296 * S - 15.8)
 
