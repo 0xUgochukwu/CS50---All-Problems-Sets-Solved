@@ -30,11 +30,11 @@ def count_letters(text):
 
     return letters
 
-# def count_words(text):
-#     words = 0
+def count_words(text):
+    words = 0
 
-#     for i in text:
-#         if
+    for i in text:
+        if 
 
 
 main()
