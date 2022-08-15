@@ -29,7 +29,7 @@ def main():
         max_counts.append(0)
 
         # Loop through squence to find the current STR
-        for j in range(len())
+        for j in range(len(sequence))
 
     # TODO: Check database for matching profiles
 
