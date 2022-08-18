@@ -7,9 +7,9 @@ int main()
 
 	// return (0);
 
-	char *name = NULL;
+	char *name = "David";
 
-	scanf("%s", name);
+	
     int count = strlen(name);
 
 
