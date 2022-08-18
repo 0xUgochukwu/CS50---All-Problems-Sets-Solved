@@ -7,7 +7,7 @@ int main()
 
 	// return (0);
 
-	char *name;
+	char *name = NULL;
 	int count = 0;
 	scanf("%s", name);
 
