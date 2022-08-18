@@ -8,11 +8,12 @@ int main()
 	// return (0);
 
 	char *name = NULL;
-	int count = 0;
+
 	scanf("%s", name);
+    int count = strlen(name);
 
 
 
-	printf("%lu\n", strlen(name));
+	printf("%i\n", count);
 
 }
