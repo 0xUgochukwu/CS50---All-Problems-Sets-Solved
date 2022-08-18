@@ -7,13 +7,13 @@ int main()
 
 	// return (0);
 
-	char *name = "David";
+	char *name;
 
-	
-    int count = strlen(name);
+	scanf("%s", &name);
+    // int count = strlen(name);
 
 
 
-	printf("%i\n", count);
+	printf("%s\n", name);
 
 }
