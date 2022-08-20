@@ -3,5 +3,6 @@
         "*.ejs": "html",
         "stdlib.h": "c",
         "typeinfo": "c"
-    }
+    },
+    "gitdoc.enabled": true
 }
