@@ -1,9 +1,8 @@
-SELECT COUNT(movies.title) FROM movies
-INNER JOIN (
-    SELECT movie_id AS DeppMovies FROM stars WHERE person_id = (SELECT id FROM people WHERE name = 'Johnny Depp')
-    INNER JOIN (SELECT movie_id AS DeppMovies FROM stars WHERE person_id = (SELECT id FROM people WHERE name = 'Johnny Depp'))
-    INNER JOIN (SELECT movie_id FROM stars WHERE person_id = (SELECT id FROM people WHERE name = 'Helena Bonham')) AS helMovies ON helMovies.movie_id = DeppMovies.movie_id
-
-    )
-AS newMovies ON newMovies.movie_id = movies.id
-
+SELECT movies.title FROM people
+JOIN stars ON people.id = stars.person_id
+JOIN movies ON stars.movie_id = movies.id
+WHERE people.name = "Johnny Depp" AND movies.title IN(
+SELECT movies.title FROM people
+JOIN stars ON people.id = stars.person_id
+JOIN movies ON stars.movie_id = movies.id
+WHERE people.name = "Helena Bonham Carter");
