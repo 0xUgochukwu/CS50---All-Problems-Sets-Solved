@@ -23,4 +23,6 @@ JOIN (
     WHERE year = 2021 AND day = 28 AND month = 7 AND hour = 10 AND  minute >= 15 AND activity = 'exit'
     ) AS suspects
     ON passengers.passport_number = suspects.passport_number
-JOIN flights ON passengers.flight_id = flight.id;
+JOIN flights ON passengers.flight_id = flights.id
+
+WHWRE 
