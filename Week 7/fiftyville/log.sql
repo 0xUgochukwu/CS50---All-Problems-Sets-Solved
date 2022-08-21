@@ -27,8 +27,7 @@ JOIN flights ON passengers.flight_id = flights.id
 WHERE flights.day >= 28 AND flights.month >= 7 AND flights.hour >= 10 AND flights.minute >= 15;
 
 
--- Among the Suspects only Vanessa took a flight out of town the same day the flight left the origin ariport at 3:15PM
--- That implies she is the thief so we find out where she went to
+-- We also know the suspect took a flight from the airport in fiftyville city so we can find out which of these flights originated from fiftyville
 SELECT * FROM airports
 WHERE id = (SELECT flights.destination_airport_id FROM passengers
             JOIN (
