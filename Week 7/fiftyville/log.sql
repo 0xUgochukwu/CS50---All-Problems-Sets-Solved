@@ -13,4 +13,5 @@ SELECT people.id, people.name, people.phone_number, people.passport_number, peop
 JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
 WHERE year = 2021 AND day = 28 AND month = 7 AND hour = 10 AND  minute >= 15 AND activity = 'exit';
 
--- We know that shortly afterwards the thief took a flight out of town
+-- We know that shortly afterwards the thief took a flight out of town, so let's look for people that took a flight after the robery that day
+-- that are among the suspects from the result set above
