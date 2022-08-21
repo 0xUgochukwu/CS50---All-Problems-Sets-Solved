@@ -79,3 +79,14 @@ JOIN (
     AND year >= 2021 AND month >= 7 AND day >= 28) AS suspects
 ON people.phone_number = suspects.receiver
 JOIN bank_accounts ON people.id = bank_accounts.person_id;
+
+
+SELECT * FROM people
+JOIN (
+    SELECT * FROM phone_calls
+    WHERE caller = (SELECT phone_number FROM people WHERE name = 'Diana')
+    AND year >= 2021 AND month >= 7 AND day >= 28) AS suspects
+ON people.phone_number = suspects.receiver
+JOIN bank_accounts ON people.id = bank_accounts.person_id
+JOIN atm_transcations ON bank_accounts.account_number = atm_transcations.account_number
+WHERE year >= 2021 AND month >= 7 AND day >= 28;
