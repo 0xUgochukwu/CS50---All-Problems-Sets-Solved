@@ -25,3 +25,6 @@ JOIN (
     ON passengers.passport_number = suspects.passport_number
 JOIN flights ON passengers.flight_id = flights.id
 WHERE flights.day = 28 AND flights.month = 7 AND flights.hour >= 10 AND flights.minute >= 15;
+
+
+-- Among the Suspects only Vanessa took a flight out of town the same day the flight left the origin ariport at 3:15PM
