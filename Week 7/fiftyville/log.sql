@@ -36,5 +36,5 @@ JOIN (
     ) AS suspects
     ON passengers.passport_number = suspects.passport_number
 JOIN flights ON passengers.flight_id = flights.id
-JOIN airports ON airports.id = flights.origin_airport_id;
+JOIN airports ON airports.id = flights.origin_airport_id
 WHERE flights.day >= 28 AND flights.month >= 7 AND flights.hour >= 10 AND flights.minute >= 15 AND airports.city = 'fiftyville';
