@@ -59,4 +59,13 @@ WHERE id = (SELECT flights.destination_airport_id FROM passengers
 
 -- Find the accomplice!
 
+-- Let's take a look at the people Diana called after the Robbery
+
 SELECT * FROM phone_calls WHERE caller = (SELECT phone_number FROM people WHERE name = 'Diana') AND year >= 2021 AND month >= 7 AND day >= 28;
+
+SELECT * FROM people
+JOIN (
+    SELECT * FROM phone_calls
+    WHERE caller = (SELECT phone_number FROM people WHERE name = 'Diana')
+    AND year >= 2021 AND month >= 7 AND day >= 28) AS suspects
+ON people.phone_number = suspects.receiver;
