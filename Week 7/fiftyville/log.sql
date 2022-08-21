@@ -81,7 +81,7 @@ ON people.phone_number = suspects.receiver
 JOIN bank_accounts ON people.id = bank_accounts.person_id;
 
 
-SELECT * FROM people
+SELECT atm_transactions FROM people
 JOIN (
     SELECT * FROM phone_calls
     WHERE caller = (SELECT phone_number FROM people WHERE name = 'Diana')
