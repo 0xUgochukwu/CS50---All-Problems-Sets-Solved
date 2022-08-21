@@ -28,13 +28,13 @@ WHERE flights.day >= 28 AND flights.month >= 7 AND flights.hour >= 10 AND flight
 
 
 -- We also know the suspect took a flight from the airport in fiftyville city so we can find out which of these flights originated from fiftyville
-SELECT * FROM airports
-WHERE id = (SELECT flights.destination_airport_id FROM passengers
-            JOIN (
-                SELECT people.id, people.name, people.phone_number, people.passport_number, people.license_plate FROM people
-                JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-                WHERE year = 2021 AND day = 28 AND month = 7 AND hour = 10 AND  minute >= 15 AND activity = 'exit'
-                ) AS suspects
-                ON passengers.passport_number = suspects.passport_number
-            JOIN flights ON passengers.flight_id = flights.id
-            WHERE flights.day = 28 AND flights.month = 7 AND flights.hour >= 10 AND flights.minute >= 15);
+SELECT * FROM passengers
+JOIN (
+    SELECT people.id, people.name, people.phone_number, people.passport_number, people.license_plate FROM people
+    JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
+    WHERE year = 2021 AND day = 28 AND month = 7 AND hour = 10 AND  minute >= 15 AND activity = 'exit'
+    ) AS suspects
+    ON passengers.passport_number = suspects.passport_number
+JOIN flights ON passengers.flight_id = flights.id
+JOIN airports ON airports.id = flights.origin_airport_id;
+WHERE flights.day >= 28 AND flights.month >= 7 AND flights.hour >= 10 AND flights.minute >= 15 AND airports.city = 'fiftyville';
