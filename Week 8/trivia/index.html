@@ -30,9 +30,10 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>Complete this: As white as a ______</h3>
+                <p class="check2"></p>
                 <form action="/" method="post">
-                    <input id="answer" placeholder="Your Answer" name="answer">
-                    <button type="submit">Submit</button>
+                    <input id="answer" placeholder="Your Answer" name="answer" type="text">
+                    <input type="submit">
                 </form>
             </div>
         </div>
@@ -63,6 +64,16 @@
 
             document.querySelector(".option-4").addEventListener("click", function(){
                 isWrong(document.querySelector(".option-4"));
+            });
+
+            document.querySelector("form").addEventListener("submit", function(){
+                if (document.querySelector("#answer").value === "ghost"){
+                    document.querySelector(".check2"). innerHTML = "Correct!";
+                    document.querySelector("#answer").style.backgroundColor = 'green';
+                } else {
+                    document.querySelector(".check2"). innerHTML = "Incorrect";
+                    document.querySelector("#answer").style.backgroundColor = 'red';
+                }
             });
 
         </script>
