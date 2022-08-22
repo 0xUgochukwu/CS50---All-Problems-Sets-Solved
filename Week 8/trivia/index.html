@@ -34,18 +34,18 @@
         <script>
             // TODO: Add code to check answers to questions
             function isCorrect(option){
-                option.style.backgroundColour = 'green';
+                option.style.backgroundColor = 'green';
                 document.querySelector(".check"). innerHTML = "Correct!"
             }
 
             function isWrong(option){
-                option.style.backgroundColour = 'red';
+                option.style.backgroundColor = 'red';
                 document.querySelector(".check"). innerHTML = "Inorrect!"
             }
 
             document.querySelector(".option-1").addEventListener("click", function(){
                 isWrong(document.querySelector(".option-1"));
-                document.querySelector(".option-1").style.backgroundColour = 'green';
+
             });
 
             document.querySelector(".option-2").addEventListener("click", function(){
