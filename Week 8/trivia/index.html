@@ -31,7 +31,7 @@
                 <!-- TODO: Add free response question here -->
                 <h3>Complete this: As white as a ______</h3>
                 <p class="check2"></p>
-                <form action="/" method="post">
+                <form>
                     <input id="answer" placeholder="Your Answer" name="answer" type="text">
                     <input type="submit">
                 </form>
@@ -41,12 +41,12 @@
             // TODO: Add code to check answers to questions
             function isCorrect(option){
                 option.style.backgroundColor = 'green';
-                document.querySelector(".check"). innerHTML = "Correct!"
+                document.querySelector(".check").innerHTML = "Correct!"
             }
 
             function isWrong(option){
                 option.style.backgroundColor = 'red';
-                document.querySelector(".check"). innerHTML = "Inorrect"
+                document.querySelector(".check").innerHTML = "Inorrect"
             }
 
             document.querySelector(".option-1").addEventListener("click", function(){
@@ -68,10 +68,10 @@
 
             document.querySelector("form").addEventListener("submit", function(){
                 if (document.querySelector("#answer").value === "ghost"){
-                    document.querySelector(".check2"). innerHTML = "Correct!";
+                    document.querySelector(".check2").innerHTML = "Correct!";
                     document.querySelector("#answer").style.backgroundColor = 'green';
                 } else {
-                    document.querySelector(".check2"). innerHTML = "Incorrect";
+                    document.querySelector(".check2").innerHTML = "Incorrect";
                     document.querySelector("#answer").style.backgroundColor = 'red';
                 }
             });
