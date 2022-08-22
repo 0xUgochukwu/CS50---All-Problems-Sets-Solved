@@ -8,8 +8,31 @@
         <script>
             // TODO: Add code to check answers to questions
             function isCorrect(option){
-                option.style.backgroundColour = 'green'
+                option.style.backgroundColour = 'green';
+                document.querySelector(".check"). innerHTML = "Correct!"
             }
+
+            function isWrong(option){
+                option.style.backgroundColour = 'red';
+                document.querySelector(".check"). innerHTML = "Inorrect!"
+            }
+
+            document.querySelector(".option-1").addEventListener("click", function(){
+                isWrong(document.querySelector(".option-1"));
+            });
+
+            document.querySelector(".option-2").addEventListener("click", function(){
+                isWrong(document.querySelector(".option-2"));
+            });
+
+            document.querySelector(".option-3").addEventListener("click", function(){
+                isCorrect(document.querySelector(".option-3"));
+            });
+
+            document.querySelector(".option-4").addEventListener("click", function(){
+                isWrong(document.querySelector(".option-4"));
+            });
+
         </script>
     </head>
     <body>
@@ -23,10 +46,11 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3>Which football team is the best in England</h3>
-                <button>Arsenal</button>
-                <button>Chelsea</button>
-                <button>Manchester United</button>
-                <button>Liverpool</button>
+                <p class="check"></p>
+                <button class="option-1">Arsenal</button>
+                <button class="option-2">Chelsea</button>
+                <button class="option-3">Manchester United</button>
+                <button class="option-4">Liverpool</button>
             </div>
 
             <div class="section">
