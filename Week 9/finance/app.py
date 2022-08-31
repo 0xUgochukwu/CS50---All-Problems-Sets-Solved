@@ -123,8 +123,16 @@ def register():
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
 
-        #check database if username exists
-        username_db = db.execute("SELECT username FROM usern)
+        #check database if username exists and return apology if it does
+        username_db = db.execute("SELECT username FROM users WHERE username = ?", username)
+        if username_db:
+            return render_template("apology.html")
+
+        #check if passwords match and return an apology if it doesn't
+        if password != confirmation:
+            return render_template("apology.html")
+
+        password_hash = werkzeug.security.generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
     else:
         return render_template("register.html")
 
