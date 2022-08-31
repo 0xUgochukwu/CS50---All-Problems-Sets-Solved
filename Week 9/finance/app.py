@@ -123,6 +123,11 @@ def register():
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
 
+        #check if any input is left blank
+        if not username or not password or not confirmation:
+            apologyMessage = "You left an input blank"
+            return render_template("apology.html", apologyMessage=apologyMessage)
+
         #check database if username exists and return apology if it does
         username_db = db.execute("SELECT username FROM users WHERE username = ?", username)
         if username_db:
