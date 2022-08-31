@@ -73,6 +73,8 @@ def buy():
         quote = lookup(symbol)
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
+        cash = cash - (shares * quote.price)
+
     else:
         return render_template("buy.html")
 
