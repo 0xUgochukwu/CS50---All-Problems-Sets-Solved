@@ -17,6 +17,12 @@ body {
     width: 90%;
 }
 
+.delete {
+    color: red;
+    background-color: red;
+    font-weight: 400;
+}
+
 .header {
     background-color: #477bff;
     color: #fff;
@@ -82,8 +88,4 @@ tbody tr:nth-of-type(odd) {
 }
 
 
-.delete {
-    color: #fff;
-    background-color: red;
-    font-style: bold;
-}
+
