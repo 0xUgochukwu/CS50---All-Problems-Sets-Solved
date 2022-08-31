@@ -132,7 +132,7 @@ def register():
         if password != confirmation:
             return render_template("apology.html")
 
-        password_hash = werkzeug.security.generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
+        password_hash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
     else:
         return render_template("register.html")
 
