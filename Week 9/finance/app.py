@@ -46,14 +46,19 @@ def index():
     return apology("TODO")
 
 
-# @app.route("/buy", methods=["GET", "POST"])
-# @login_required
-# def buy():
-#     """Buy shares of stock"""
-#     symbol = request.form.get("symbol")
-#     shares = request.form.get("shares")
+@app.route("/buy", methods=["GET", "POST"])
+@login_required
+def buy():
+    """Buy shares of stock"""
+    symbol = request.form.get("symbol")
+    shares = request.form.get("shares")
 
-#     if not symbol or not shares or lookup(symbol) == None
+    if not symbol or not shares:
+        #
+
+    if lookup(symbol) == None:
+        
+
 
 
 @app.route("/history")
