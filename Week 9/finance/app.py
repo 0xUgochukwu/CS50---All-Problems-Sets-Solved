@@ -123,7 +123,7 @@ def quote():
         #if quote was found return the quote
         return render_template("quoted.html", quote=quote)
     else:
-        render_template("quote.html")
+        return render_template("quote.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
