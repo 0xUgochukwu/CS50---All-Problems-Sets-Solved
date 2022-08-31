@@ -71,7 +71,7 @@ def buy():
 
         # Look up current quote
         quote = lookup(symbol)
-        cash = db.execute("SELECT cash FROM users WHERE id)
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
     else:
         return render_template("buy.html")
