@@ -120,6 +120,9 @@ def quote():
             apologyMessage = "Couldn't find Quote, Symbol does not exist"
             return render_template("apology.html", apologyMessage=apologyMessage)
 
+        #if quote was found return the quote
+        return render_template("quoted.html", quote=quote)
+
 
     else:
         render_template("quote.html")
