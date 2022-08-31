@@ -133,6 +133,8 @@ def register():
             return render_template("apology.html")
 
         password_hash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
+
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password_hash)
     else:
         return render_template("register.html")
 
