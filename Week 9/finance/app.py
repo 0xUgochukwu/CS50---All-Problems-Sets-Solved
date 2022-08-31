@@ -113,7 +113,14 @@ def logout():
 def quote():
     """Get stock quote."""
     if request.methods == "POST":
-        @loo
+        quote = lookup(request.form.get("symbol"))
+
+        #check if quote was found and retuen an apology if it wasn't found
+        if quote == None:
+            apologyMessage = "Couldn't find Quote, Symbol does not exist"
+            return render_template("apology.html", apologyMessage=apologyMessage)
+
+
     else:
         render_template("quote.html")
 
