@@ -13,7 +13,7 @@
         <div class="container">
             <div class="section">
                 <h3>{{ message1 }}</h3>
-                <h4>{{ message2 }}</h4>
+                <h2>{{ message2 }}</h2>
 
 
                 <h2>Add a Birthday</h2>
@@ -45,6 +45,9 @@
                             <tr>
                                 <td>{{birthday.name}}</td>
                                 <td>{{birthday.month}}/{{birthday.day}}</td>
+                                <form action="/delete" method="post">
+                                    <input type="submit" Value="delete" class="delete">
+                                </form>
                             </tr>
                         {% endfor %}
 

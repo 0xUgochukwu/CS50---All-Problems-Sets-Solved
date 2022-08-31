@@ -33,7 +33,7 @@ def index():
 
 
         if not name or not day or not month:
-            message1 = "Incomplete Form Submitted."
+            message1 = "Incomplete Form Submitted!"
             message2 = "Birthday not recorded :("
             return render_template("index.html", message1=message1, message2=message2)
         else:
