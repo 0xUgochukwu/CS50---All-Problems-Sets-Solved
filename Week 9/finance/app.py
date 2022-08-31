@@ -119,7 +119,12 @@ def quote():
 def register():
     """Register user"""
     if request.method == "POST":
-        return render_template("register.html")
+        username = request.form.get("username")
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
+
+        #check database if username exists
+        username_db = db.execute("SELECT username FROM usern)
     else:
         return render_template("register.html")
 
