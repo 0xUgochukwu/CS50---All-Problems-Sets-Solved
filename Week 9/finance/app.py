@@ -131,7 +131,7 @@ def register():
         #check database if username exists and return apology if it does
         username_db = db.execute("SELECT username FROM users WHERE username = ?", username)
         if username_db:
-            apologyMessage = "The Username you entered Already exists"
+            apologyMessage = "Sorry, the Username you entered Already exists"
             return render_template("apology.html", apologyMessage=apologyMessage)
 
         #check if passwords match and return an apology if it doesn't
