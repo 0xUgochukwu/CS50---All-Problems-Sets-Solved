@@ -31,9 +31,11 @@ def index():
         month = request.form.get("month")
         day = request.form.get("day")
 
+
         if not name or not day or not month:
-            message = "<h3>Incomplete Form Submitted.<h3> <h4>Birthday not recorded :(<h4>"
-            return render_template("index.html", message=message)
+            message1 = "Incomplete Form Submitted."
+            message2 = "Birthday not recorded :("
+            return render_template("index.html", message1=message1, message2=message2)
         else:
             db.execute("INSERT INTO birthdays(name, month, day) VALUES(?,?,?)", name, month, day)
             return redirect("/")
