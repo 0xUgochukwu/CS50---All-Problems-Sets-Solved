@@ -53,11 +53,28 @@ def buy():
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
 
-    if not symbol or not shares:
-        #
+    if request.method == "POST":
+        #check for possible errors
+        if not symbol or not shares:
+            apologyMessage = "You left an input empty!"
+            return render_template("apology.html", apologyMessage=apologyMessage)
 
-    if lookup(symbol) == None:
-        
+
+
+        if lookup(symbol) == None:
+            apologyMessage = "Couldn't find Quote, Symbol does not exist"
+            return render_template("apology.html", apologyMessage=apologyMessage)
+
+        if shares <= 0:
+            apologyMessage = "Invalid number of shares"
+            return render_template("apology.html", apologyMessage=apologyMessage)
+
+        # Look up current quote
+        quote = lookup(symbol)
+        cash = db.execute("SELECT cash FROM users WHERE id)
+
+    else:
+        return render_template("buy.html")
 
 
 
