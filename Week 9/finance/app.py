@@ -126,11 +126,13 @@ def register():
         #check database if username exists and return apology if it does
         username_db = db.execute("SELECT username FROM users WHERE username = ?", username)
         if username_db:
-            return render_template("apology.html")
+            apologyMessage = "The Username you entered Already exists"
+            return render_template("apology.html", apologyMessage=apologyMessage)
 
         #check if passwords match and return an apology if it doesn't
         if password != confirmation:
-            return render_template("apology.html")
+            apologyMessage = " Your Passwords do not Match!"
+            return render_template("apology.html", apologyMessage=apologyMessage)
 
         password_hash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
 
