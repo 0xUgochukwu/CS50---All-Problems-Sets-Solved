@@ -221,7 +221,7 @@ def sell():
     user_id = session["user_id"]
     cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]['cash']
     price = result["price"]
-    remain = cash + price * shares
+    remain = cash + (price * shares)
     db.execute("UPDATE users SET cash = ? WHERE id = ?", remain, user_id)
     # Log the transaction into orders
     db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", \
