@@ -7,6 +7,7 @@ from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from helpers import apology, login_required, lookup, usd
+from datetime import datetime, timezone
 
 # Configure application
 app = Flask(__name__)
@@ -74,6 +75,13 @@ def buy():
             cash = cash - (shares * quote.price)
             # update cash in Database
             db.execute("UPDATE users SET cash = ? WHERE ID = ?", cash, session["user_id"])
+
+            db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", \
+                                     session["user_id"], quote.symbol, quote.shares, quote.price, time_now())
+
+            return redirect("/")
+        else:
+            return apology("You don't have enough cash!")
 
 
     else:
