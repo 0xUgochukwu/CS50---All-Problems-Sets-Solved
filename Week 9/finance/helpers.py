@@ -5,6 +5,10 @@ import urllib.parse
 from flask import redirect, render_template, request, session
 from functools import wraps
 from datetime import datetime, timezone
+from cs50 import SQL
+
+
+db = SQL("sqlite:///finance.db")
 
 
 def apology(message, code=400):
