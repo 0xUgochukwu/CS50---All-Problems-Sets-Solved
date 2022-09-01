@@ -74,8 +74,10 @@ def own_shares(user_id):
     owns = {}
     user_transactions = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", user_id)
     for q in user_transactions:
+        #set the symbols and shares variable
         symbol, shares = q["symbol"], q["shares"]
-        owns[symbol] = owns.setdefault(symbol, 0) + shares
+        #sets owns using the symbol and adds the shares to the current value of the shares
+        owns[symbol] = owns.setdefault(symbol, 0) + shares # if no shares yet set the shares in owns to zero for that symbol
     # filter zero-share stocks
     owns = {k: v for k, v in owns.items() if v != 0}
     return owns
