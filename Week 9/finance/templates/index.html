@@ -6,7 +6,7 @@
 
 {% block main %}
 
-    <table>
+    <table style='margin-top: 30px' class="table table-striped table-dark">
       <thead>
         <tr>
           <th scope="col"> Symbol </th>
@@ -19,18 +19,18 @@
       <tbody>
         {% for symbol, values in owns.items() %}
         <tr>
-          <th> {{ symbol }} </th>
+          <th scope="row"> {{ symbol }} </th>
           <td>  {{ values[0] }}  </td>
           <td>  {{ values[1] }}  </td>
           <td>  {{ values[2] }}  </td>
           <td>  {{ values[3] }}  </td>
         </tr>
         {% endfor %}
-        <tr>
+        <tr class='bg-success'>
             <th scope='row' colspan='4'> Remaining Cash </th>
             <td> {{cash}} </td>
         </tr>
-        <tr>
+        <tr class='bg-primary'>
             <th scope='row' colspan='4'> TOTAL BALANCE </th>
             <td> {{total}} </td>
         </tr>
