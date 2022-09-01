@@ -209,7 +209,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    owns = own_shares()
+    owns = own_shares(session["user_id"])
     if request.method == "GET":
         return render_template("sell.html", owns = owns.keys())
 
