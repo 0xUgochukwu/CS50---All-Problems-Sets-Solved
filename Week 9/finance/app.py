@@ -71,7 +71,7 @@ def buy():
         quote = lookup(symbol)
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
-        if cash > (shares * quote.price):
+        if cash >= (shares * quote.price):
             cash = cash - (shares * quote.price)
             # update cash in Database
             db.execute("UPDATE users SET cash = ? WHERE ID = ?", cash, session["user_id"])
