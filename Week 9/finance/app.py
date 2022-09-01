@@ -56,18 +56,16 @@ def buy():
     if request.method == "POST":
         #check for possible errors
         if not symbol or not shares:
-            apologyMessage = "You left an input empty!"
-            return render_template("apology.html", apologyMessage=apologyMessage)
+            apologyMessage =
+            return apology("You left an input empty!")
 
 
 
         if lookup(symbol) == None:
-            apologyMessage = "Couldn't find Quote, Symbol does not exist"
-            return render_template("apology.html", apologyMessage=apologyMessage)
+            return apology("Couldn't find Quote, Symbol does not exist")
 
         if shares <= 0:
-            apologyMessage = "Invalid number of shares"
-            return render_template("apology.html", apologyMessage=apologyMessage)
+               return apology("Invalid number of shares")
 
         # Look up current quote
         quote = lookup(symbol)
@@ -148,8 +146,7 @@ def quote():
 
         #check if quote was found and retuen an apology if it wasn't found
         if quote == None:
-            apologyMessage = "Couldn't find Quote, Symbol does not exist"
-            return render_template("apology.html", apologyMessage=apologyMessage)
+            return apology("Couldn't find Quote, Symbol does not exist")
 
         #if quote was found return the quote
         return render_template("quoted.html", quote=quote)
@@ -173,13 +170,11 @@ def register():
         #check database if username exists and return apology if it does
         username_db = db.execute("SELECT username FROM users WHERE username = ?", username)
         if username_db:
-            apologyMessage = "Sorry, the Username you entered Already exists"
-            return render_template("apology.html", apologyMessage=apologyMessage)
+            return apology("Sorry, the Username you entered Already exists")
 
         #check if passwords match and return an apology if it doesn't
         if password != confirmation:
-            apologyMessage = " Your Passwords do not Match!"
-            return render_template("apology.html", apologyMessage=apologyMessage)
+            return apology("Your Passwords do not Match!")
 
         password_hash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
 
