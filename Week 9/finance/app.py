@@ -76,8 +76,8 @@ def buy():
         if cash > (shares * quote.price):
             cash = cash - (shares * quote.price)
             # update cash in Database
-            db.execute()
-            
+            db.execute("UPDATE users SET cash)
+
 
     else:
         return render_template("buy.html")
