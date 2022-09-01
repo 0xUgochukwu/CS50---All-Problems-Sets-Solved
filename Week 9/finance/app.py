@@ -164,8 +164,7 @@ def register():
 
         #check if any input is left blank
         if not username or not password or not confirmation:
-            apologyMessage = "You left an input blank"
-            return render_template("apology.html", apologyMessage=apologyMessage)
+            return apology("You left an input blank")
 
         #check database if username exists and return apology if it does
         username_db = db.execute("SELECT username FROM users WHERE username = ?", username)
