@@ -56,7 +56,6 @@ def buy():
     if request.method == "POST":
         #check for possible errors
         if not symbol or not shares:
-            apologyMessage =
             return apology("You left an input empty!")
 
 
