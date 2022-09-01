@@ -76,7 +76,7 @@ def buy():
         if cash > (shares * quote.price):
             cash = cash - (shares * quote.price)
             # update cash in Database
-            db.execute("UPDATE users SET cash)
+            db.execute("UPDATE users SET cash = ? WHERE ID = ?", session["user_id"])
 
 
     else:
