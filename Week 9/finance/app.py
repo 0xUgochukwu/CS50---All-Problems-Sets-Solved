@@ -89,7 +89,7 @@ def buy():
             db.execute("UPDATE users SET cash = ? WHERE ID = ?", cash, session["user_id"])
 
             db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", \
-                                     session["user_id"], quote["symbol"], quote["shares"], quote["price"], time_now())
+                                     session["user_id"], quote["symbol"], shares, quote["price"], time_now())
 
             return redirect("/")
         else:
