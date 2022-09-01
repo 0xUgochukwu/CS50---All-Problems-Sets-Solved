@@ -6,8 +6,8 @@ from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from helpers import apology, login_required, lookup, usd
-from datetime import datetime, timezone
+from helpers import apology, login_required, lookup, usd, own_shares, time_now
+
 
 # Configure application
 app = Flask(__name__)

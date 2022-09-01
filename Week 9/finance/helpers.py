@@ -4,6 +4,7 @@ import urllib.parse
 
 from flask import redirect, render_template, request, session
 from functools import wraps
+from datetime import datetime, timezone
 
 
 def apology(message, code=400):
@@ -62,3 +63,20 @@ def lookup(symbol):
 def usd(value):
     """Format value as USD."""
     return f"${value:,.2f}"
+
+
+def own_shares(user_id):
+    """Helper function: Which stocks the user owns, and numbers of shares owned. Return: dictionary {symbol: qty}"""
+    owns = {}
+    query = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", user_id)
+    for q in query:
+        symbol, shares = q["symbol"], q["shares"]
+        owns[symbol] = owns.setdefault(symbol, 0) + shares
+    # filter zero-share stocks
+    owns = {k: v for k, v in owns.items() if v != 0}
+    return owns
+
+def time_now():
+    """HELPER: get current UTC date and time"""
+    now_utc = datetime.now(timezone.utc)
+    return str(now_utc.date()) + ' @time ' + now_utc.time().strftime("%H:%M:%S")
