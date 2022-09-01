@@ -63,7 +63,7 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
+        shares = int(request.form.get("shares"))
 
         # Look up current quote
         quote = lookup(symbol)
@@ -77,19 +77,19 @@ def buy():
         if not quote:
             return apology("Couldn't find Quote, Symbol does not exist")
 
-        if int(shares) <= 0:
+        if shares <= 0:
                return apology("Invalid number of shares")
 
 
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]['cash']
 
         if cash >= (shares * quote["price"]):
-            cash = cash - (shares * quote.price)
+            cash = cash - (shares * quote["price"])
             # update cash in Database
             db.execute("UPDATE users SET cash = ? WHERE ID = ?", cash, session["user_id"])
 
             db.execute("INSERT INTO orders (user_id, symbol, shares, price, timestamp) VALUES (?, ?, ?, ?, ?)", \
-                                     session["user_id"], quote.symbol, quote.shares, quote.price, time_now())
+                                     session["user_id"], quote["symbol"], quote["shares"], quote["price"], time_now())
 
             return redirect("/")
         else:
