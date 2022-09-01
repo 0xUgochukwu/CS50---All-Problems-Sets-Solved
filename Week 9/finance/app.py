@@ -62,7 +62,7 @@ def index():
 def buy():
     """Buy shares of stock"""
     symbol = request.form.get("symbol")
-    shares = int(request.form.get("shares"))
+    shares = request.form.get("shares")
 
     # Look up current quote
     quote = lookup(symbol)
@@ -77,7 +77,7 @@ def buy():
         if not quote:
             return apology("Couldn't find Quote, Symbol does not exist")
 
-        if shares <= 0:
+        if int(shares) <= 0:
                return apology("Invalid number of shares")
 
 
