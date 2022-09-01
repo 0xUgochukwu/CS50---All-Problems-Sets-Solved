@@ -215,7 +215,7 @@ def sell():
     shares = int(request.form.get("shares")) # Don't forget: convert str to int
     # check whether there are sufficient shares to sell
     if owns[symbol] < shares:
-        return render_template("sell.html", invalid=True, symbol=symbol, owns = owns.keys())
+        return apology(f"You have only {owns[symbol]} shares of {symbol}, you don't have enough to sell")
     # Execute sell transaction: look up sell price, and add fund to cash,
     result = lookup(symbol)
     user_id = session["user_id"]
