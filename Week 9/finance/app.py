@@ -61,13 +61,13 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    symbol = request.form.get("symbol")
-    shares = request.form.get("shares")
-
-    # Look up current quote
-    quote = lookup(symbol)
-
     if request.method == "POST":
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+
+        # Look up current quote
+        quote = lookup(symbol)
+
         #check for possible errors
         if not symbol or not shares:
             return apology("You left an input empty!")
