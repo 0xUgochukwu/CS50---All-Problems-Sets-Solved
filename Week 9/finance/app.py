@@ -74,7 +74,7 @@ def buy():
         if lookup(symbol) == None:
             return apology("Couldn't find Quote, Symbol does not exist")
 
-        if shares <= 0:
+        if int(shares) <= 0:
                return apology("Invalid number of shares")
 
         # Look up current quote
