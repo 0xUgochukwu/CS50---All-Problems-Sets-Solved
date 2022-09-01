@@ -64,6 +64,9 @@ def buy():
     symbol = request.form.get("symbol")
     shares = int(request.form.get("shares"))
 
+    # Look up current quote
+    quote = lookup(symbol)
+
     if request.method == "POST":
         #check for possible errors
         if not symbol or not shares:
@@ -77,8 +80,7 @@ def buy():
         if shares <= 0:
                return apology("Invalid number of shares")
 
-        # Look up current quote
-        quote = lookup(symbol)
+
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
         if cash >= (shares * quote["price"]):
