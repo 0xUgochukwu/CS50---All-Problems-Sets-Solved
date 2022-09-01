@@ -72,8 +72,8 @@ def usd(value):
 def own_shares(user_id):
     """Helper function: Which stocks the user owns, and numbers of shares owned. Return: dictionary {symbol: qty}"""
     owns = {}
-    query = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", user_id)
-    for q in query:
+    user_transactions = db.execute("SELECT symbol, shares FROM orders WHERE user_id = ?", user_id)
+    for q in user_transactions:
         symbol, shares = q["symbol"], q["shares"]
         owns[symbol] = owns.setdefault(symbol, 0) + shares
     # filter zero-share stocks
