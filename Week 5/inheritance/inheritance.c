@@ -16,6 +16,10 @@ person;
 const int GENERATIONS = 3;
 const int INDENT_LENGTH = 4;
 
+struct person obj1 = {  }
+
+person person =
+
 person *create_family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
