@@ -40,8 +40,8 @@ int main(int argc, string argv[])
 
 char rotate(char x, string key)
 {
-    char cipher_char;
-    int index;
+    // char cipher_char;
+    // int index;
 
     if (x >= 65 && x <= 90)
     {
